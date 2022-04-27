@@ -2,45 +2,45 @@
     padding: 0;
     margin: 0;
 
-    --background-color: black;
-    --surface-bg-color: aqua;
-    --epipelagic-zone-bg-color: rgb(0, 182, 182);
-    --mesopelagic-zone-bg-color: rgb(0, 150, 150);
-    --bathypelagic-zone-bg-color: rgb(0, 119, 119);
-    --abyssopelagic-zone-bg-color: rgb(0, 116, 116);
-    --hadalpelagic-zone-bg-color: rgb(0, 77, 77);
+    --sky-color: #87CEEB;
+    --epipelagic-zone-bg-color: #37a9ff;
+    --mesopelagic-zone-bg-color: #0079d4;
+    --bathypelagic-zone-bg-color: #005da3;
+    --abyssopelagic-zone-bg-color: #004172;
+    --hadalpelagic-zone-bg-color: #002541;
+    --ocean-bottom-bg-color: #000000;
 }
 
-body {
-    background-color: var(--background-color);
+h3 {
+    text-align: center;
 }
 
 .surface {
-    height: 100px;
-    background-color: var(--surface-bg-color);
+    height: 400px;
+    background-image: linear-gradient(var(--sky-color), var(--epipelagic-zone-bg-color));
 }
 
 .epipelagic-zone {
     height: 200px;
-    background-color: var(--epipelagic-zone-bg-color);
+    background-image: linear-gradient(var(--epipelagic-zone-bg-color), var(--mesopelagic-zone-bg-color));
 }
 
 .mesopelagic-zone {
     height: 800px;
-    background-color: var(--mesopelagic-zone-bg-color);
+    background-image: linear-gradient(var(--mesopelagic-zone-bg-color), var(--bathypelagic-zone-bg-color));
 }
 
 .bathypelagic-zone {
     height: 3000px;
-    background-color: var(--bathypelagic-zone-bg-color);
+    background-image: linear-gradient(var(--bathypelagic-zone-bg-color), var(--abyssopelagic-zone-bg-color));
 }
 
 .abyssopelagic-zone {
     height: 2000px;
-    background-color: var(--abyssopelagic-zone-bg-color);
+    background-image: linear-gradient(var(--abyssopelagic-zone-bg-color), var(--hadalpelagic-zone-bg-color));
 }
 
 .hadalpelagic-zone {
     height: 4984px;
-    background-color: var(--hadalpelagic-zone-bg-color);
+    background-image: linear-gradient(var(--hadalpelagic-zone-bg-color), var(--ocean-bottom-bg-color));
 }
