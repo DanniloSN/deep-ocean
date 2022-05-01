@@ -1,0 +1,50 @@
+* {
+    --foo-inactive-size: 10px;
+    --foo-active-size: 100px;
+    --hover-animation-time: 700ms;
+}
+
+.foo {
+    position: absolute;
+    left: 50%; /* Center on screen */
+}
+
+.foo-card {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    height: calc(var(--foo-inactive-size) * var(--scale));
+    width: calc(var(--foo-inactive-size) * var(--scale));
+    border: 2px solid white;
+    background-color: transparent;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: padding var(--hover-animation-time),
+        height var(--hover-animation-time),
+        width var(--hover-animation-time);
+}
+
+.foo-card h1, p {
+    opacity: 0;
+    transition: opacity var(--hover-animation-time);
+}
+
+.foo-card h1 {
+    text-align: center;
+}
+
+.foo-card p {
+    text-align: justify;
+}
+
+.foo-card:hover {
+    padding: 1rem;
+    height: calc(var(--foo-active-size) * var(--scale));
+    width: calc(var(--foo-active-size) * var(--scale));
+    background-color: white;
+    border-radius: 7px;
+}
+
+.foo-card:hover h1, p {
+    opacity: 1;
+}
