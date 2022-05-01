@@ -1,5 +1,7 @@
 # Deep Ocean
 
+Github pages: https://dannilosn.github.io/deep-ocean/
+
 - [x] Resposive height
 - [x] Background water gradient
 - [ ] Finish data dot
