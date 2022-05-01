@@ -2,63 +2,21 @@
     padding: 0;
     margin: 0;
 
-    --mobile-height-scale: 2;
-    --tablet-height-scale: 3;
-    --desktop-height-scale: 4;
+    --mobile-scale: 2;
+    --tablet-scale: 3;
+    --desktop-scale: 4;
 
-    --height-scale: var(--mobile-height-scale);
-
-    --sky-color: #87CEEB;
-    --epipelagic-zone-bg-color: #37a9ff;
-    --mesopelagic-zone-bg-color: #0079d4;
-    --bathypelagic-zone-bg-color: #005da3;
-    --abyssopelagic-zone-bg-color: #004172;
-    --hadalpelagic-zone-bg-color: #002541;
-    --ocean-bottom-bg-color: #000000;
+    --scale: var(--mobile-scale);
 }
 
 @media (min-width: 768px) { /* Tablets */
     * {
-        --height-scale: var(--tablet-height-scale);
+        --scale: var(--tablet-scale);
     }
 }
 
 @media (min-width: 992px) { /* Desktop */
     * {
-        --height-scale: var(--desktop-height-scale);
+        --scale: var(--desktop-scale);
     }
-}
-
-h3 {
-    text-align: center;
-}
-
-.surface {
-    height: calc(400px * var(--height-scale));
-    background-image: linear-gradient(var(--sky-color), var(--epipelagic-zone-bg-color));
-}
-
-.epipelagic-zone {
-    height: calc(200px * var(--height-scale));
-    background-image: linear-gradient(var(--epipelagic-zone-bg-color), var(--mesopelagic-zone-bg-color));
-}
-
-.mesopelagic-zone {
-    height: calc(800px * var(--height-scale));
-    background-image: linear-gradient(var(--mesopelagic-zone-bg-color), var(--bathypelagic-zone-bg-color));
-}
-
-.bathypelagic-zone {
-    height: calc(3000px * var(--height-scale));
-    background-image: linear-gradient(var(--bathypelagic-zone-bg-color), var(--abyssopelagic-zone-bg-color));
-}
-
-.abyssopelagic-zone {
-    height: calc(2000px * var(--height-scale));
-    background-image: linear-gradient(var(--abyssopelagic-zone-bg-color), var(--hadalpelagic-zone-bg-color));
-}
-
-.hadalpelagic-zone {
-    height: calc(4984px * var(--height-scale));
-    background-image: linear-gradient(var(--hadalpelagic-zone-bg-color), var(--ocean-bottom-bg-color));
 }
