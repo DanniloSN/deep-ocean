@@ -17,6 +17,10 @@ h3 {
     background-image: linear-gradient(var(--sky-color), var(--epipelagic-zone-bg-color));
 }
 
+.ocean-level {
+    position: relative;
+}
+
 .epipelagic-zone {
     height: calc(200px * var(--scale));
     background-image: linear-gradient(var(--epipelagic-zone-bg-color), var(--mesopelagic-zone-bg-color));
