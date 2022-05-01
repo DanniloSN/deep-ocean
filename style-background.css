@@ -8,10 +8,6 @@
     --ocean-bottom-bg-color: #000000;
 }
 
-h3 {
-    text-align: center;
-}
-
 .surface {
     height: calc(400px * var(--scale));
     background-image: linear-gradient(var(--sky-color), var(--epipelagic-zone-bg-color));
