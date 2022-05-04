@@ -15,13 +15,19 @@
     padding: 0;
     height: calc(var(--foo-inactive-size) * var(--scale));
     width: calc(var(--foo-inactive-size) * var(--scale));
-    border: 2px solid white;
+    outline: 2px solid white;
     background-color: transparent;
     border-radius: 50%;
     overflow: hidden;
     transition: padding var(--hover-animation-time),
         height var(--hover-animation-time),
         width var(--hover-animation-time);
+}
+
+.foo-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
 }
 
 .foo-card h1, p {
@@ -38,7 +44,6 @@
 }
 
 .foo-card:hover {
-    padding: 1rem;
     height: calc(var(--foo-active-size) * var(--scale));
     width: calc(var(--foo-active-size) * var(--scale));
     background-color: white;
