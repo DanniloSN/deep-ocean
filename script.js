@@ -20,31 +20,41 @@ const foos = [
 ]
 
 const generateFoo = (fooData) => {
-    const foo = document.createElement('div')
-    foo.className = 'foo'
-    foo.style.top = `${fooData.depth}px`
+    // Dot
+    const fooDot = document.createElement('div')
+    fooDot.className = 'foo'
+    fooDot.style.top = `calc(${fooData.depth}px * var(--scale))`
 
+    // Card
     const fooCard = document.createElement('div')
     fooCard.className = 'foo-card'
 
-    const fooImage = document.createElement('img')
-    fooImage.className = 'foo-image'
-    fooImage.src = fooData.image
+    // Image
+    const fooCardImage = document.createElement('img')
+    fooCardImage.className = 'foo-image'
+    fooCardImage.src = fooData.image
 
-    const fooCardTitle = document.createElement('h1')
-    fooCardTitle.innerHTML = `${fooData.title} - ${fooData.depth}m`
+    // Content container
+    const fooCardContentContainer = document.createElement('div')
+    fooCardContentContainer.className = 'foo-content-container'
 
-    const fooCardDescription = document.createElement('p')
-    fooCardDescription.innerHTML = fooData.description
+    // Content container's title
+    const contentContainerTitle = document.createElement('h1')
+    contentContainerTitle.innerHTML = `${fooData.title}<br />${fooData.depth}m`
 
-    fooCard.appendChild(fooImage)
-    fooCard.appendChild(fooCardTitle)
-    fooCard.appendChild(document.createElement('br'))
-    fooCard.appendChild(fooCardDescription)
+    // Content container's description
+    const contentContainerDescription = document.createElement('p')
+    contentContainerDescription.innerHTML = fooData.description
 
-    foo.appendChild(fooCard)
+    // Appends
+    fooCardContentContainer.appendChild(contentContainerTitle)
+    fooCardContentContainer.appendChild(document.createElement('br'))
+    fooCardContentContainer.appendChild(contentContainerDescription)
+    fooCard.appendChild(fooCardImage)
+    fooCard.appendChild(fooCardContentContainer)
+    fooDot.appendChild(fooCard)
 
-    return foo
+    return fooDot
 }
 
 foos.forEach(foo => {
