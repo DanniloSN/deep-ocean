@@ -16,6 +16,12 @@ const foos = [
         depth: 3962.4,
         title: 'RMS Titanic',
         description: 'RMS Titanic was a British passenger liner, operated by the White Star Line, which sank in the North Atlantic Ocean on 15 April 1912 after striking an iceberg during her maiden voyage from Southampton, UK, to New York City. Of the estimated 2,224 passengers and crew aboard, more than 1,500 died, which made the sinking possibly one of the deadliest for a single ship up to that time.'
+    },
+    {
+        image: 'https://upload.wikimedia.org/wikipedia/commons/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg',
+        depth: 8848.86,
+        title: 'Mount Everest',
+        description: 'Mount Everest is the highest mountain on Earth. Mount Everest is in the Himalayas, a mountain range. It is about 8,848.86 metres high.'
     }
 ]
 
