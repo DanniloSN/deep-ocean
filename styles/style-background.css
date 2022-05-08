@@ -8,6 +8,16 @@
     --ocean-bottom-bg-color: #000000;
 }
 
+.zone {
+    color: white;
+    text-align: center;
+}
+
+.zone-name {
+    font-family: OceanFamily;
+    text-transform: uppercase;
+}
+
 .surface {
     height: calc(400px * var(--scale));
     background-image: linear-gradient(var(--sky-color), var(--epipelagic-zone-bg-color));

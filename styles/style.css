@@ -9,6 +9,11 @@
     --scale: var(--mobile-scale);
 }
 
+@font-face {
+    font-family: OceanFamily;
+    src: url("../fonts/ThewaveRegular-OVOe8.ttf")
+}
+
 @media (min-width: 768px) { /* Tablets */
     * {
         --scale: var(--tablet-scale);
