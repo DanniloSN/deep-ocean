@@ -1,27 +1,27 @@
 * {
-    padding: 0;
-    margin: 0;
-
-    --mobile-scale: 2;
-    --tablet-scale: 3;
-    --desktop-scale: 4;
-
-    --scale: var(--mobile-scale);
+  padding: 0;
+  margin: 0;
+  --mobile-scale: 2;
+  --tablet-scale: 3;
+  --desktop-scale: 4;
+  --scale: var(--mobile-scale);
 }
 
 @font-face {
-    font-family: OceanFamily;
-    src: url("../fonts/ThewaveRegular-OVOe8.ttf")
+  font-family: OceanFamily;
+  src: url('../fonts/ThewaveRegular-OVOe8.ttf');
 }
 
-@media (min-width: 768px) { /* Tablets */
-    * {
-        --scale: var(--tablet-scale);
-    }
+@media (min-width: 768px) {
+  /* Tablets */
+  * {
+    --scale: var(--tablet-scale);
+  }
 }
 
-@media (min-width: 992px) { /* Desktop */
-    * {
-        --scale: var(--desktop-scale);
-    }
+@media (min-width: 992px) {
+  /* Desktop */
+  * {
+    --scale: var(--desktop-scale);
+  }
 }
