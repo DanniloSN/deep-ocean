@@ -18,17 +18,19 @@
   max-width: 768px;
 }
 
-.zone header p {
-  text-align: justify;
-}
-
 .zone header h1 {
+  padding-top: 1rem;
   font-family: OceanFamily;
   text-transform: uppercase;
   font-size: 2rem;
 }
 
+.zone header h2 {
+  padding-bottom: 1rem;
+}
+
 .zone header p {
+  text-align: justify;
   padding: 0 1rem;
 }
 
