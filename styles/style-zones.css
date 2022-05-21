@@ -11,27 +11,40 @@
 .zone {
   color: white;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.zone header {
+.zone-header {
   margin: auto;
-  max-width: 768px;
+  max-width: var(--max-width);
 }
 
-.zone header h1 {
+.zone-header h1 {
   padding-top: 1rem;
   font-family: OceanFamily;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 2.1rem;
+  filter: var(--filter-drop-shadow);
 }
 
-.zone header h2 {
+.zone-header h2 {
   padding-bottom: 1rem;
 }
 
-.zone header p {
+.zone-header p {
   text-align: justify;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
+  font-size: 1.2rem;
+}
+
+.zone-body {
+  margin: auto;
+  max-width: var(--max-width);
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .surface {

@@ -30,6 +30,7 @@ const generateFoo = (fooData) => {
     const fooDot = document.createElement('div')
     fooDot.className = 'foo'
     fooDot.style.top = `calc(${fooData.depth}px * var(--scale))`
+    fooDot.style.visibility = 'hidden'
 
     // Card
     const fooCard = document.createElement('div')

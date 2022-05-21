@@ -5,25 +5,41 @@
   --tablet-scale: 3;
   --desktop-scale: 4;
   --scale: var(--mobile-scale);
+  --max-width: 768px;
+  --filter-drop-shadow: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.25));
+}
+
+button {
+  border-radius: 50%;
+  filter: var(--filter-drop-shadow);
+}
+
+.controls {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  opacity: 0.3;
 }
 
 .controls button {
-  position: fixed;
-  right: 1rem;
   height: 4rem;
   width: 4rem;
-  border: none;
-  border-radius: 50%;
-  opacity: 0.3;
-  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.25);
 }
 
-.controls #changeModeButton {
-  bottom: 1rem;
+#playAudioButton {
+  height: 6.5rem;
+  width: 6.5rem;
+  background-color: transparent;
+  border: solid white;
+  border-width: 0.5rem;
+  font-weight: bold;
+  color: white;
+  transition: transform 200ms, border 200ms;
 }
 
-.controls #playAudioButton {
-  bottom: 5.5rem;
+#playAudioButton:active {
+  transform: scale(1.1);
+  border-width: 0.3rem;
 }
 
 @font-face {

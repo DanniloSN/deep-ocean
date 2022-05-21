@@ -5,12 +5,10 @@ const oceanAudio = new Audio('audios/UnderwaterSoundEffect.wav')
 oceanAudio.loop = true
 
 const INFORMATIVE_MODE = 'INFORMATIVE'
-const LIFE_MODE = 'LIFE'
 const FOO_MODE = 'FOO'
 
 const modes = [
     INFORMATIVE_MODE,
-    LIFE_MODE,
     FOO_MODE
 ]
 
@@ -23,9 +21,6 @@ function onModeChange(mode) {
         case INFORMATIVE_MODE:
             showInformativeData()
             break
-        case LIFE_MODE:
-            showLifeData()
-            break
         case FOO_MODE:
             showFooData()
             break
@@ -37,26 +32,23 @@ function onModeChange(mode) {
 function hideAllContent() {
     const elements = []
         .concat(Array.from(document.getElementsByClassName('zone-header')))
+        .concat(Array.from(document.getElementsByClassName('zone-body')))
         .concat(Array.from(document.getElementsByClassName('foo')))
-    elements.forEach(element => element.style.display = 'none')
+    elements.forEach(element => element.style.visibility = 'hidden')
 }
 
 function showInformativeData() {
     changeModeButton.innerHTML = 'Z'
-    const elements = Array.from(document.getElementsByClassName('zone-header'))
-    elements.forEach(element => element.style.display = 'block')
-}
-
-function showLifeData() {
-    changeModeButton.innerHTML = 'L'
-    const elements = Array.from(document.getElementsByClassName(''))
-    elements.forEach(element => element.style.display = 'block')
+    const elements = []
+        .concat(Array.from(document.getElementsByClassName('zone-header')))
+        .concat(Array.from(document.getElementsByClassName('zone-body')))
+    elements.forEach(element => element.style.visibility = 'visible')
 }
 
 function showFooData() {
-    changeModeButton.innerHTML = 'I'
+    changeModeButton.innerHTML = 'F'
     const elements = Array.from(document.getElementsByClassName('foo'))
-    elements.forEach(element => element.style.display = 'block')
+    elements.forEach(element => element.style.visibility = 'visible')
 }
 
 changeModeButton.addEventListener('click', () => {
@@ -70,6 +62,7 @@ playAudioButton.addEventListener('click', () => {
         oceanAudio.pause()
         oceanAudio.currentTime = 0
     } else oceanAudio.play()
+    playAudioButton.innerHTML = playingAudio ? 'PLAY AUDIO' : 'STOP'
     playingAudio = !playingAudio
 })
 
