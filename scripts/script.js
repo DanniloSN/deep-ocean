@@ -17,13 +17,7 @@ const modes = [
 let selectedModeIndex = 0
 let playingAudio = false
 
-const changeMode = () => {
-    if (selectedModeIndex < modes.length-1) selectedModeIndex++
-    else selectedModeIndex = 0
-    onModeChange(modes[selectedModeIndex])
-}
-
-const onModeChange = (mode) => {
+function onModeChange(mode) {
     hideAllContent()
     switch (mode) {
         case INFORMATIVE_MODE:
@@ -40,35 +34,48 @@ const onModeChange = (mode) => {
     }
 }
 
-const hideAllContent = () => {
+function hideAllContent() {
     const elements = []
         .concat(Array.from(document.getElementsByClassName('zone-header')))
         .concat(Array.from(document.getElementsByClassName('foo')))
     elements.forEach(element => element.style.display = 'none')
 }
 
-const showInformativeData = () => {
+function showInformativeData() {
+    changeModeButton.innerHTML = 'Z'
     const elements = Array.from(document.getElementsByClassName('zone-header'))
     elements.forEach(element => element.style.display = 'block')
 }
 
-const showLifeData = () => {
+function showLifeData() {
+    changeModeButton.innerHTML = 'L'
     const elements = Array.from(document.getElementsByClassName(''))
     elements.forEach(element => element.style.display = 'block')
 }
 
-const showFooData = () => {
+function showFooData() {
+    changeModeButton.innerHTML = 'I'
     const elements = Array.from(document.getElementsByClassName('foo'))
     elements.forEach(element => element.style.display = 'block')
 }
 
-const playAudio = () => {
+changeModeButton.addEventListener('click', () => {
+    if (selectedModeIndex < modes.length - 1) selectedModeIndex++
+    else selectedModeIndex = 0
+    onModeChange(modes[selectedModeIndex])
+})
+
+playAudioButton.addEventListener('click', () => {
     if (playingAudio) {
         oceanAudio.pause()
         oceanAudio.currentTime = 0
     } else oceanAudio.play()
     playingAudio = !playingAudio
+})
+
+function start() {
+    hideAllContent()
+    showInformativeData()
 }
 
-changeModeButton.addEventListener('click', () => changeMode())
-playAudioButton.addEventListener('click', () => playAudio())
+start()
