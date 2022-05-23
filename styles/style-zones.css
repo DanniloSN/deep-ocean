@@ -30,6 +30,7 @@
 
 .zone-header h2 {
   padding-bottom: 1rem;
+  filter: var(--filter-drop-shadow);
 }
 
 .zone-header p {
