@@ -1,12 +1,15 @@
-* {
-  padding: 0;
-  margin: 0;
+:root {
   --mobile-scale: 2;
   --tablet-scale: 3;
   --desktop-scale: 4;
   --scale: var(--mobile-scale);
   --max-width: 768px;
   --filter-drop-shadow: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.25));
+}
+
+* {
+  padding: 0;
+  margin: 0;
 }
 
 button {
